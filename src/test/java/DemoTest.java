@@ -7,6 +7,6 @@ public class DemoTest {
     public void TestDemo()
     {
         demo = new Demo();
-        Assert.assertTrue(demo.GetName("Naveen") == "Naveen1");
+        Assert.assertTrue(demo.GetName("Naveen") == "Naveen");
     }
 }
