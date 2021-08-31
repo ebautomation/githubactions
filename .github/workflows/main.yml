@@ -49,8 +49,10 @@ jobs:
     needs: [build, test]
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
+      - uses: actions/checkout@v2
       - name: Merge branch
         uses: devmasx/merge-branch@1.4.0
         with:
+            from_branch: develop
             target_branch: qat
             github_token: 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
