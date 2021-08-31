@@ -58,7 +58,6 @@ jobs:
     needs: [build, test]
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
-      - uses: actions/checkout@master
       - name: Merge branch
         uses: devmasx/merge-branch@1.4.0
         with:
