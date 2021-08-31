@@ -56,4 +56,4 @@ jobs:
             type: now
             from_branch: develop
             target_branch: qat
-            github_token: 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
+            github_token: ${{ secrets.GITHUB_TOKEN }}
