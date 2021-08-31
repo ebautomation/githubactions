@@ -19,25 +19,11 @@ jobs:
   build:
     # The type of runner that the job will run on
     runs-on: ubuntu-latest
-
-    # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
-      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-      - uses: actions/checkout@v2
-
-      # Runs a single command using the runners shell
-      - name: Run a one-line script
-        run: echo Hello, world!
-      
-      - name: Set up JDK 1.8
-        uses: actions/setup-java@v1
+      - name: Run Automation Test In Development Environment
+        uses: actions/checkout@v2
         with:
-          java-version: 1.8
-          
-      - name: Build with Maven
-        run: mvn clean test
-      - name: Merge branch
-        uses: devmasx/merge-branch@1.4.0
-        with:
-            target_branch: qat
-            github_token: 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
+          repository: TheAtlasTango/tango-qa-automation
+          ref: master
+          persist-credentials: false
+          token: ${{ secrets.WorkflowSecret }}
